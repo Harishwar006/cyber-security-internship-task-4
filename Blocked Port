@@ -1,0 +1,24 @@
+Before block Port
+     
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22                         ALLOW IN    Anywhere                  
+[ 2] 23                         DENY IN     Anywhere                  
+[ 3] 23/tcp                     DENY IN     Anywhere                  
+[ 4] 22/tcp (v6)                DENY IN     Anywhere (v6)             
+[ 5] 22 (v6)                    ALLOW IN    Anywhere (v6)             
+[ 6] 23 (v6)                    DENY IN     Anywhere (v6)             
+[ 7] 23/tcp (v6)                DENY IN     Anywhere (v6)             
+
+After block 
+
+    To                         Action      From
+     --                         ------      ----
+[ 1] 22                         ALLOW IN    Anywhere                  
+[ 2] 23                         DENY IN     Anywhere                  
+[ 3] 23/tcp                     DENY IN     Anywhere                  
+[ 4] 22/tcp                     ALLOW IN    Anywhere                  
+[ 5] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[ 6] 22 (v6)                    ALLOW IN    Anywhere (v6)             
+[ 7] 23 (v6)                    DENY IN     Anywhere (v6)             
+[ 8] 23/tcp (v6)                DENY IN     Anywhere (v6) 
